@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+   http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>de.andycandy</groupId>
+	<artifactId>protect-me</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		
+		<!-- groovy version to use for tests: -->
+		<groovy.rt.version>3.0.4</groovy.rt.version>
+		<!-- groovy-batch version to use for tests: -->
+		<groovy.xx.version>3.0.4-02</groovy.xx.version>
+		<!-- maven-compiler version to use for tests: -->
+		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+		
+		<groovy-eclipse-compiler.version>3.6.0-03</groovy-eclipse-compiler.version>
+	</properties>
+
+	<modules>
+		<module>util</module>
+		<module>ast</module>
+		<module>ast-test</module>
+	</modules>
+
+</project>

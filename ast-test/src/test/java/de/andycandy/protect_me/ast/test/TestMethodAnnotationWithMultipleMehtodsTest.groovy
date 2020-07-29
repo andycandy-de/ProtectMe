@@ -1,7 +1,6 @@
 package de.andycandy.protect_me.ast.test;
 
 import static org.assertj.core.api.Assertions.assertThat
-import static org.assertj.core.api.InstanceOfAssertFactories.ITERABLE
 
 import org.junit.jupiter.api.Test
 

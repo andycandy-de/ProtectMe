@@ -74,7 +74,7 @@ The @Protect ast annotation can be used in groovy and can be defined on types an
 
 MIT License
 
-Copyright (c) 2020 the andycandy-de
+Copyright (c) 2020 andycandy-de
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

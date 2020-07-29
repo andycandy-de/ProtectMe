@@ -10,9 +10,9 @@ class TestGenerationMethodWithCustomPrefixTest {
 	@Test
 	void testAutoMethodCreation() {
 
-		TestGenerationMethodWithCustomPrefix testGenerationMethodWithCustomPrefix = new TestGenerationMethodWithCustomPrefix()
+		TestGenerationMethodWithCustomPrefix testObject = new TestGenerationMethodWithCustomPrefix()
 
-		ReadOnly readOnly = testGenerationMethodWithCustomPrefix.protectReadOnly()
+		ReadOnly readOnly = testObject.protectReadOnly()
 
 		assertThat(readOnly).isInstanceOf(ReadOnly)
 		assertThat(readOnly).isNotInstanceOf(TestGenerationMethodWithCustomPrefix)

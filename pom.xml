@@ -24,6 +24,13 @@
 		<groovy-eclipse-compiler.version>3.6.0-03</groovy-eclipse-compiler.version>
 	</properties>
 
+	<scm>
+		<connection>scm:git:https://github.com/andycandy-de/ProtectMe.git</connection>
+		<developerConnection>scm:git:https://github.com/andycandy-de/ProtectMe.git</developerConnection>
+		<url>https://github.com/andycandy-de/ProtectMe</url>
+		<tag>${project.version}</tag>
+	</scm>
+
 	<modules>
 		<module>util</module>
 		<module>ast</module>

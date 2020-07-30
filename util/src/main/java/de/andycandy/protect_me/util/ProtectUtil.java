@@ -8,6 +8,17 @@ import java.util.Set;
 
 public final class ProtectUtil {
 
+	/**
+	 * This method creates a proxy which delegates all methods defined in the
+	 * provided class to the object t. Furthermore methods defined in the Object
+	 * class will be delegated as well. The method return implements the provided class.
+	 * 
+	 * @param <T> typeparameter
+	 * @param t object for delegation
+	 * @param clazz provided class
+	 * @return a delegating proxy
+	 */
+
 	@SuppressWarnings("unchecked")
 	public static <T> T protect(T t, Class<T> clazz) {
 

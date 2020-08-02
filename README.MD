@@ -49,7 +49,6 @@ The idea is that the object is wrapped by a proxy and we declare the method whic
 ```
 public final class ProtectUtil {
 
-	@SuppressWarnings("unchecked")
 	public static <T> T protect(T t, Class<T> clazz) {
 
 		Set<Method> methodSet = new HashSet<>(Arrays.asList(clazz.getMethods()));
@@ -61,7 +60,12 @@ public final class ProtectUtil {
 						throw new NoSuchMethodException();
 					}
 
-					return method.invoke(t, args);
+					try {						
+						return method.invoke(t, args);
+					}
+				    catch (InvocationTargetException e) {
+				        throw e.getCause();
+				    }
 				});
 	}
 
@@ -69,6 +73,36 @@ public final class ProtectUtil {
 ```
 This is done with the ProtectUtil class, which is available for java and groovy. The generated proxy also delegates the methods of the class Object. So mehtods like equals and toString should still work.
 The @Protect ast annotation can be used in groovy and can be defined on types and methods.
+
+## Dependencies
+
+Groovy AST dependency gradle
+'''
+implementation 'com.github.andycandy-de:protect-me-ast:1.1'
+'''
+
+Groovy AST dependency maven
+'''
+<dependency>
+	<groupId>com.github.andycandy-de</groupId>
+	<artifactId>protect-me-ast</artifactId>
+	<version>1.1</version>
+</dependency>
+'''
+
+Java util dependency gradle
+'''
+implementation 'com.github.andycandy-de:protect-me-util:1.1'
+'''
+
+Java util dependency maven
+'''
+<dependency>
+	<groupId>com.github.andycandy-de</groupId>
+	<artifactId>protect-me-util</artifactId>
+	<version>1.1</version>
+</dependency>
+'''
 
 ## License
 

@@ -3,7 +3,7 @@
 
 	<groupId>com.github.andycandy-de</groupId>
 	<artifactId>protect-me</artifactId>
-	<version>1.1-SNAPSHOT</version>
+	<version>1.1</version>
 	<packaging>pom</packaging>
 	<name>${project.groupId}:${project.artifactId}</name>
 	<description>A simple library which allows you to protect your java object with an interface.</description>
@@ -35,7 +35,7 @@
 		<connection>scm:git:https://github.com/andycandy-de/ProtectMe.git</connection>
 		<developerConnection>scm:git:https://github.com/andycandy-de/ProtectMe.git</developerConnection>
 		<url>https://github.com/andycandy-de/ProtectMe</url>
-		<tag>@{project.version}</tag>
+		<tag>1.1</tag>
 	</scm>
 
 	<modules>

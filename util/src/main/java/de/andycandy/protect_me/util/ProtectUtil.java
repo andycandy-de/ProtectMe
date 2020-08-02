@@ -1,5 +1,6 @@
 package de.andycandy.protect_me.util;
 
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Arrays;
@@ -31,7 +32,12 @@ public final class ProtectUtil {
 						throw new NoSuchMethodException();
 					}
 
-					return method.invoke(t, args);
+					try {						
+						return method.invoke(t, args);
+					}
+				    catch (InvocationTargetException e) {
+				        throw e.getCause();
+				    }
 				});
 	}
 

@@ -50,4 +50,15 @@ public class ProtectUtilTest {
 		Assertions.assertThatThrownBy(() -> getMethod.invoke(it, new Object[] { Integer.valueOf(0) })).isInstanceOf(IllegalArgumentException.class);
 	}
 
+
+	@Test
+	public void testProtect_WithException() throws Exception {
+
+		List<String> list = Arrays.asList("1", "2", "3");
+
+		@SuppressWarnings("unchecked")
+		List<String> protectedList = ProtectUtil.protect(list, List.class);
+		
+		Assertions.assertThatThrownBy(() -> protectedList.get(3)).isInstanceOf(ArrayIndexOutOfBoundsException.class);
+	}
 }

@@ -77,32 +77,32 @@ The @Protect ast annotation can be used in groovy and can be defined on types an
 ## Dependencies
 
 Groovy AST dependency gradle
-'''
+```
 implementation 'com.github.andycandy-de:protect-me-ast:1.1'
-'''
+```
 
 Groovy AST dependency maven
-'''
+```
 <dependency>
 	<groupId>com.github.andycandy-de</groupId>
 	<artifactId>protect-me-ast</artifactId>
 	<version>1.1</version>
 </dependency>
-'''
+```
 
 Java util dependency gradle
-'''
+```
 implementation 'com.github.andycandy-de:protect-me-util:1.1'
-'''
+```
 
 Java util dependency maven
-'''
+```
 <dependency>
 	<groupId>com.github.andycandy-de</groupId>
 	<artifactId>protect-me-util</artifactId>
 	<version>1.1</version>
 </dependency>
-'''
+```
 
 ## License
 

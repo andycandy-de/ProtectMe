@@ -26,7 +26,7 @@ public final class ProtectUtil {
 		Set<Method> methodSet = new HashSet<>(Arrays.asList(clazz.getMethods()));
 		methodSet.addAll(Arrays.asList(Object.class.getMethods()));
 
-		return (T) Proxy.newProxyInstance(ProtectUtil.class.getClassLoader(), new Class[] { clazz },
+		return (T) Proxy.newProxyInstance(t.getClass().getClassLoader(), new Class[] { clazz },
 				(proxy, method, args) -> {
 					if (!methodSet.contains(method)) {
 						throw new NoSuchMethodException();

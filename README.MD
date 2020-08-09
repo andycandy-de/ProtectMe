@@ -54,7 +54,7 @@ public final class ProtectUtil {
 		Set<Method> methodSet = new HashSet<>(Arrays.asList(clazz.getMethods()));
 		methodSet.addAll(Arrays.asList(Object.class.getMethods()));
 
-		return (T) Proxy.newProxyInstance(ProtectUtil.class.getClassLoader(), new Class[] { clazz },
+		return (T) Proxy.newProxyInstance(t.getClass().getClassLoader(), new Class[] { clazz },
 				(proxy, method, args) -> {
 					if (!methodSet.contains(method)) {
 						throw new NoSuchMethodException();
@@ -78,7 +78,7 @@ The @Protect ast annotation can be used in groovy and can be defined on types an
 
 Groovy AST dependency gradle
 ```
-implementation 'com.github.andycandy-de:protect-me-ast:1.1'
+implementation 'com.github.andycandy-de:protect-me-ast:1.2'
 ```
 
 Groovy AST dependency maven
@@ -86,13 +86,13 @@ Groovy AST dependency maven
 <dependency>
 	<groupId>com.github.andycandy-de</groupId>
 	<artifactId>protect-me-ast</artifactId>
-	<version>1.1</version>
+	<version>1.2</version>
 </dependency>
 ```
 
 Java util dependency gradle
 ```
-implementation 'com.github.andycandy-de:protect-me-util:1.1'
+implementation 'com.github.andycandy-de:protect-me-util:1.2'
 ```
 
 Java util dependency maven
@@ -100,7 +100,7 @@ Java util dependency maven
 <dependency>
 	<groupId>com.github.andycandy-de</groupId>
 	<artifactId>protect-me-util</artifactId>
-	<version>1.1</version>
+	<version>1.2</version>
 </dependency>
 ```
 
